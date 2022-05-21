@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      
+  <meta charset="UTF-8">
+      
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Gradient Color Picker</title>
+      
+  <link rel="stylesheet" href="css /style.css">
+      
+  <link rel="stylesheet" href="https: //cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.5/css/all.min.css">
+      
+  <link rel="stylesheet" href="https: //fonts.googleapis.com/css?family=Montserrat">
+</head>
+
+<body>
+
+  <!---[ Container]--->
+  <div class="container">
+    <h3 class="title">Gradient Color Picker</h3>
+    <!---[ Flex box]--->
+    <div class="bxFlex1">
+      <div class="bxColor1">
+        <input type="color" id="picker1" value="#000000">
+      </div>
+      <div class="boxs">
+        <div class="btnC">
+          <div class="Copy__info left8">Copied !</div>
+          <div class="box1" id="gColor1"></div>
+          <textarea readonly id="rightT"></textarea>
+        </div>
+      </div>
+      <div class="bxColor2">
+        <input type="color" id="picker2" value="#000000">
+      </div>
+    </div>
+    
+    <!---[ Color Picker Titles]--->
+    <div class="valueBox">
+      <span class="P1-title">Color Picker 1</span>
+      <span class="P2-title">Color Picker 2</span>
+    
+      <!---[ Slider]--->
+     <div class="slider">
+     <div class="pct__text" data-pct="0"> </div>
+     <input id="pct" type="range" min="0" max="100" value="0" />
+     </div>
+
+      <!---[ Checkbox]--->
+      <div class="checkBox">
+        <input type="checkbox" id="options" />
+        <label for="options">Other values</label>
+      </div>
+      <!---[ Div Hide Box ]--->
+      <div id="show" style="display:none; overflow-y: scroll; overflow-x: hidden; height: 200px">
+        <!---[ Left color box ]--->
+        <div class="ValueBoxs btnC">
+        
+          <div class="Copy__info right1">Copy</div>
+          <div class="Copy__info left1">Copied !</div>
+          
+          <div class="valueBox">
+            <span class="Bx-title">Left</span>
+          </div>
+          
+          <div class="box2" id="gColor2"></div>
+          <textarea readonly id="leftT"></textarea>
+          <button id="copy-btn" style="--x: 0; --y: 0" onclick="copyEvent1()"></button>
+        </div>
+        <!---[ Top color box ]--->
+        <div class="ValueBoxs btnC">
+          <div class="Copy__info right2">Copy</div>
+          <div class="Copy__info left2">Copied !</div>
+          <div class="valueBox">
+            <span class="Bx-title">Top</span>
+          </div>
+          <div class="box3" id="gColor3"></div>
+          <textarea readonly id="topT"></textarea>
+          <button id="copy-btn" style="--x: 0; --y: 0" onclick="copyEvent2()"></button>
+        </div>
+        <!---[ Bottom color box ]--->
+        <div class="ValueBoxs btnC">
+          <div class="Copy__info right3">Copy</div>
+          <div class="Copy__info left3">Copied !</div>
+          <div class="valueBox">
+            <span class="Bx-title">Bottom</span>
+          </div>
+          <div class="box4" id="gColor4"></div>
+          <textarea readonly id="bT"></textarea>
+          <button id="copy-btn" style="--x: 0; --y: 0" onclick="copyEvent3()"></button>
+        </div>
+        <!---[ Top left color box ]--->
+        <div class="ValueBoxs btnC">
+          <div class="Copy__info right4">Copy</div>
+          <div class="Copy__info left4">Copied !</div>
+          <div class="valueBox">
+            <span class="Bx-title">Top Left</span>
+          </div>
+          <div class="box5" id="gColor5"></div>
+          <textarea readonly id="tLT"></textarea>
+          <button id="copy-btn" style="--x: 0; --y: 0" onclick="copyEvent4()"></button>
+        </div>
+        <!---[ Bottom left color box ]--->
+        <div class="ValueBoxs btnC">
+          <div class="Copy__info right5">Copy</div>
+          <div class="Copy__info left5">Copied !</div>
+          <div class="valueBox">
+            <span class="Bx-title">Bottom Left</span>
+          </div>
+          <div class="box6" id="gColor6"></div>
+          <textarea readonly id="tRT"></textarea>
+          <button id="copy-btn" style="--x: 0; --y: 0" onclick="copyEvent5()"></button>
+        </div>
+        <!---[ Top right color box ]--->
+        <div class="ValueBoxs btnC">
+          <div class="Copy__info right6">Copy</div>
+          <div class="Copy__info left6">Copied !</div>
+          <div class="valueBox">
+            <span class="Bx-title">Top Right</span>
+          </div>
+          <div class="box7" id="gColor7"></div>
+          <textarea readonly id="bLT"></textarea>
+          <button id="copy-btn" style="--x: 0; --y: 0" onclick="copyEvent6()"></button>
+        </div>
+        <!---[ Bottom right color box ]--->
+        <div class="ValueBoxs btnC">
+          <div class="Copy__info right7">Copy</div>
+          <div class="Copy__info left7">Copied !</div>
+          <div class="valueBox">
+            <span class="Bx-title">Bottom Right</span>
+          </div>
+          <div class="box8" id="gColor8"></div>
+          <textarea readonly id="bRT"></textarea>
+          <button id="copy-btn" style="--x: 0; --y: 0" onclick="copyEvent7()"></button>
+        </div>
+      </div>
+    </div>
+    <!---[ Div Hide Box End ]--->
+    <button class="btn gen" id="Gen" onclick="color()">Random</button>
+    <button class="btn copy" id="copy" onclick="copyEvent0()">Copy</button>
+  </div>
+  <!---[ Container End ]--->
+</body>
+
+</html>
