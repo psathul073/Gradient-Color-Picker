@@ -43,7 +43,6 @@ div.container {
   border: 1px solid #00aeff;
   padding: 20px;
   margin: 15px;
-  top: 100%;
   -webkit-box-shadow: var(--cboxS);
   box-shadow: var(--cboxS);
 }
